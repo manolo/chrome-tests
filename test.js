@@ -15,7 +15,7 @@ process.argv.forEach(a => {
 
   const page = await context.newPage();
   await page.goto(`http://localhost:8080/`);
-  await page.locator('input[type="Hi"]');
+  await page.$$('input[type="Hi"]');
   await context.close();
   await browser.close();
 })();
